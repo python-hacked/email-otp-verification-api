@@ -64,7 +64,6 @@ def expire_otp(email):
 
 
 
-# app.py (continued)
 
 @app.route('/users/verify', methods=['POST'])
 def verify_user():
@@ -82,7 +81,6 @@ def verify_user():
     return jsonify({'error': 'Invalid OTP or Email'}), 400
 
 
-# app.py (continued)
 
 @app.route('/login', methods=['POST'])
 def login():
@@ -97,7 +95,6 @@ def login():
 
     return jsonify({'error': 'Invalid credentials or user not verified'}), 401
 
-# app.py (continued)
 
 @app.route('/users', methods=['GET'])
 @jwt_required
